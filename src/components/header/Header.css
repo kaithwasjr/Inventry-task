@@ -1,0 +1,40 @@
+.HeaderContainer{
+    width: calc(100% - 40px);
+    padding: 20px;
+    background-color: #007AFF;
+    max-height: 80px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.Header_sec1{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center
+}
+
+.Header_sec2{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.HeaderLogoContainer{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+
+.HeaderHeadingContainer{
+    font-size: 28px;
+    font-weight: 500;
+    color: #ffffff;
+    line-height: 36px;
+}
+
+.HeaderRightNavigation{
+    color: #ffffff
+}

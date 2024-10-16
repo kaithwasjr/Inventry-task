@@ -1,0 +1,34 @@
+.InputUniContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: left;
+    gap: 4px;
+}
+
+.inputLabel{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.UniTextComp{
+    width: 90%;
+padding: 8px 12px 8px 12px;
+gap: 4px;
+border-radius: 6px 0px 0px 0px;
+border: 1px solid #00000033;
+border-radius: 5px;
+
+}
+
+.inputWarning{
+    font-family: Inter;
+font-size: 12px;
+font-weight: 400;
+line-height: 16px;
+text-align: left;
+color: #00000080;
+
+}

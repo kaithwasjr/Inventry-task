@@ -1,0 +1,23 @@
+.submitBlockPera {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    color: #000000;
+
+
+}
+
+.submitBlockButton {
+    background-color: #007AFF;
+    padding: 15px 30px;
+    width: 60%;
+    border: none;
+    border-radius: 5px;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #ffffff
+}

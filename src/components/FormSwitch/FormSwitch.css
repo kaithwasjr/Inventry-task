@@ -1,0 +1,71 @@
+.FormSwitchContainer{
+    width: calc(100% - 340px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 170px;
+    gap: 40px;
+}
+
+.SwitchContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.CheckBoxInputContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.Unicheckbox{
+    margin: 0;
+    border: 1px solid #007AFF !important;
+    background-color: #F9F5FF;
+    padding: 5px;
+
+}
+
+input[type='chcekbox'] {
+    border: 1px solid #007AFF;
+
+    border-color: #007AFF;
+}
+
+.UnicheckboxLabel{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #344054;
+
+}
+
+.formHeading{
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+}
+
+.formContainer{
+   
+    width: 100%;
+padding: 32px;
+gap: 8px;
+border-radius: 16px;
+opacity: 0px;
+background-color: #EBEEFD;
+
+
+}
+
+.InputUniContainer{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;   
+}
