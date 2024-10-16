@@ -29,6 +29,9 @@ export default function InventoryTable() {
     fetchData();
   }, []);
 
+  console.log(error);
+  
+
   if (loading) return <p>Loading data...</p>;
   // if (error) return <p>Error: {error}</p>;
 
