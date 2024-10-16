@@ -1,21 +1,35 @@
-
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  formData: {},
+  formValues: {
+    itemName: '',
+    quantity: '',
+    unitPrice: '',
+    submissionDate: '',
+    supplierName: '',
+    companyName: '',
+    city: '',
+    email: '',
+    country: '',
+    state: '',
+    phoneCode: '',
+    phoneNumber: '',
+  },
 };
 
-const FormSlice = createSlice({
-  name: 'formData',
+const formSlice = createSlice({
+  name: 'form',
   initialState,
   reducers: {
-    addFormData: (state, action) => {
-      state.formData = { ...state.formData, ...action.payload };
-      console.log('Updated Form Data:', state.formData);
+    updateFormValue: (state, action) => {
+      const { name, value } = action.payload;
+      state.formValues[name] = value;
+    },
+    resetForm: (state) => {
+      state.formValues = { ...initialState.formValues };
     },
   },
 });
 
-export const { addFormData } = FormSlice.actions;
-
-export default FormSlice.reducer;
+export const { updateFormValue, resetForm } = formSlice.actions;
+export default formSlice.reducer;
