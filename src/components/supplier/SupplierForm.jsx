@@ -2,9 +2,7 @@ import React, { useState } from 'react';
 import UniTextComp from '../Unicomponents/UniTextComp';
 import UniSelectComp from '../Unicomponents/UniSelectComp';
 
-export default function SupplierForm({ setFormValues, formValues }) {
-  const [errors, setErrors] = useState({});
-
+export default function SupplierForm({ setFormValues, formValues, errors, setErrors }) {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
@@ -31,6 +29,7 @@ export default function SupplierForm({ setFormValues, formValues }) {
         break;
       case 'city':
         if (value.trim() === '') errorMsg = 'City is required';
+        else if (value.length > 50) errorMsg = 'Max 50 characters allowed';
         break;
       case 'country':
         if (!value) errorMsg = 'Please select a country';
@@ -60,7 +59,8 @@ export default function SupplierForm({ setFormValues, formValues }) {
           name="supplierName"
           Label="Supplier Name"
           PlaceHoder="Enter Supplier Name"
-          warning={errors.supplierName || "Max 50 characters"}
+          warning={"Max 50 characters"}
+          error={errors.supplierName}
           value={formValues.supplierName}
           onChange={handleChange}
         />
@@ -68,7 +68,8 @@ export default function SupplierForm({ setFormValues, formValues }) {
           name="companyName"
           Label="Company Name"
           PlaceHoder="Enter Company Name"
-          warning={errors.companyName || "Max 50 characters"}
+          warning={"Max 50 characters"}
+          error={errors.companyName}
           value={formValues.companyName}
           onChange={handleChange}
         />
@@ -79,7 +80,8 @@ export default function SupplierForm({ setFormValues, formValues }) {
           name="email"
           Label="Email Address"
           PlaceHoder="Enter email address"
-          warning={errors.email || "Valid email format"}
+          warning={"Valid email format"}
+          error={errors.email}
           value={formValues.email}
           onChange={handleChange}
         />
@@ -87,7 +89,8 @@ export default function SupplierForm({ setFormValues, formValues }) {
           name="city"
           Label="City"
           PlaceHoder="Enter City"
-          warning={errors.city || "Max 50 characters"}
+          warning={"Max 50 characters"}          
+          error={errors.city}
           value={formValues.city}
           onChange={handleChange}
         />
@@ -98,6 +101,7 @@ export default function SupplierForm({ setFormValues, formValues }) {
           label="Country"
           options={countryOptions}
           value={formValues.country}
+          error={errors.country}
           onChange={handleChange}
           warning={errors.country}
         />
@@ -107,8 +111,8 @@ export default function SupplierForm({ setFormValues, formValues }) {
           label="State"
           options={stateOptions[formValues.country] || []}
           value={formValues.state}
+          error={errors.state}
           onChange={handleChange}
-          disabled={!formValues.country}
           warning={errors.state}
         />
       </div>

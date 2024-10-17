@@ -6,10 +6,11 @@ export default function UniSelectComp({
   options = [], 
   value, 
   onChange, 
-  disabled = false 
+  disabled = false ,
+  error
 }) {
   return (
-    <div className='forminputcontainer'>
+    <div className='InputUniContainer'>
       <label className='inputLabel'>{label}</label>
       <select 
         name={name} 
@@ -26,6 +27,9 @@ export default function UniSelectComp({
           </option>
         ))}
       </select>
+      <div className='wornig_error'>
+      <p className='inputError'>{error}</p>
+      </div>
     </div>
   );
 }

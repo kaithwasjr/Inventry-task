@@ -2,9 +2,7 @@ import React, { useState } from 'react';
 import UniTextComp from '../Unicomponents/UniTextComp';
 import './itemForm.css';
 
-export default function ItemForm({ setFormValues, formValues }) {
-  const [errors, setErrors] = useState({});
-
+export default function ItemForm({ setFormValues, formValues, errors,  setErrors}) {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
@@ -45,7 +43,8 @@ export default function ItemForm({ setFormValues, formValues }) {
           name="itemName"
           Label="Item Name"
           PlaceHoder="Enter Item Name"
-          warning={errors.itemName || "Max 50 characters"}
+          warning={"Max 50 characters"}
+          error={errors.itemName}
           value={formValues.itemName}
           onChange={handleChange}
         />
@@ -53,7 +52,8 @@ export default function ItemForm({ setFormValues, formValues }) {
           name="quantity"
           Label="Quantity"
           PlaceHoder="Enter Quantity"
-          warning={errors.quantity || "Numeric Value"}
+          warning={"Numeric Value"}
+          error={errors.quantity}
           value={formValues.quantity}
           onChange={handleChange}
         />
@@ -63,7 +63,8 @@ export default function ItemForm({ setFormValues, formValues }) {
           name="unitPrice"
           Label="Unit Price"
           PlaceHoder="Enter Unit Price"
-          warning={errors.unitPrice || "Numeric Value (USD)"}
+          warning={"Numeric Value (USD)"}
+          error={errors.unitPrice}
           value={formValues.unitPrice}
           onChange={handleChange}
         />
@@ -71,7 +72,8 @@ export default function ItemForm({ setFormValues, formValues }) {
           name="submissionDate"
           Label="Date of Submission"
           PlaceHoder="Select Date"
-          warning={errors.submissionDate || "Format - (MM/DD/YYYY)"}
+          warning={"Format - (MM/DD/YYYY)"}
+          error={errors.submissionDate}
           value={formValues.submissionDate}
           onChange={handleChange}
         />

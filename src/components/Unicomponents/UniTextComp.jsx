@@ -1,7 +1,7 @@
 import React from 'react';
 import './Unicomp.css';
 
-export default function UniTextComp({ name, PlaceHoder, Label, warning, value, onChange }) {
+export default function UniTextComp({ name, PlaceHoder, Label, warning, value, onChange, error }) {
   return (
     <div className='InputUniContainer'>
       <label className='inputLabel'>{Label}</label>
@@ -13,7 +13,10 @@ export default function UniTextComp({ name, PlaceHoder, Label, warning, value, o
         value={value}
         onChange={onChange}
       />
-      <p className='inputWarning'>{warning}</p>
+    <div className='wornig_error'>
+    <p className='inputWarning'>{warning}</p>
+      <p className='inputError'>{error}</p>
+      </div>
     </div>
   );
 }

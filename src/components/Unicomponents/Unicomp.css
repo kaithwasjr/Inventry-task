@@ -32,3 +32,20 @@ text-align: left;
 color: #00000080;
 
 }
+
+
+.inputError{
+    font-family: Inter;
+font-size: 12px;
+font-weight: 500;
+line-height: 16px;
+text-align: left;
+color: #ff5252;
+
+}
+
+.wornig_error{
+display: flex;
+width: 90%;
+justify-content: space-between;
+}
